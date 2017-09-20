@@ -1,4 +1,6 @@
 # your code goes here
+
+
 class Person
   attr_accessor :bank_account
   attr_reader :name, :happiness, :hygiene
@@ -16,9 +18,9 @@ class Person
     elsif value < 0
       @happiness = 0
     else
-  @happiness = value
+      @happiness = value
+    end
   end
-end
 
   def hygiene=(value)
 
@@ -29,6 +31,7 @@ end
     else
       @hygiene = value
     end
+
   end
 
   def clean?
@@ -48,8 +51,10 @@ end
   end
 
   def work_out
-    hygiene += -3
-    happiness += 2
+    new_hygiene = @hygiene - 3
+    new_happiness = @happiness + 2
+    hygiene=(new_hygiene)
+    happiness=(new_happiness)
     return "♪ another one bites the dust ♫"
   end
 

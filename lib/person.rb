@@ -10,6 +10,7 @@ class Person
     @bank_account = 25
     @happiness = 8
     @hygiene = 8
+
   end
 
   def happiness=(value)
@@ -35,7 +36,7 @@ class Person
   end
 
   def clean?
-    if self.hygiene > 7
+    if hygiene > 7
       true
     else
       false
@@ -91,7 +92,7 @@ class Person
         return "blah blah blah blah blah"
       end
     else
-      "That's not a person!"
+      return "That's not a person!"
     end
   end
 

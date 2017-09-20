@@ -1,4 +1,4 @@
-require "pry"
+
 RSpec.describe "Person" do
 
   let(:stella) { Person.new("Stella") }
@@ -171,7 +171,7 @@ RSpec.describe "Person" do
     describe "#work_out" do
 
       it "makes the person dirtier by 3 points" do
-        binding.pry
+
         penelope.hygiene = 10
         penelope.work_out
         expect(penelope.hygiene).to eq(7)
